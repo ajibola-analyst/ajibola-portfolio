@@ -46,7 +46,6 @@
             background-size: 30px 30px;
         }
 
-        /* Responsive Container */
         .container {
             max-width: 1200px;
             width: 100%;
@@ -301,12 +300,10 @@
             padding: 30px;
             position: relative;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            /* CRITICAL FIX: Stops the grid blowout issue */
             min-width: 0; 
         }
 
         .sidebar-section {
-            /* CRITICAL FIX: Stops the grid blowout issue */
             min-width: 0;
         }
 
@@ -332,7 +329,6 @@
             z-index: 2;
         }
 
-        /* ONE LINE TABS */
         .tabs {
             display: flex;
             gap: 15px;
@@ -412,7 +408,6 @@
 
         .project-links { display: flex; gap: 10px; }
 
-        /* UPGRADED SHARP BUTTONS */
         .friendly-btn {
             display: inline-flex;
             align-items: center;
@@ -435,7 +430,6 @@
             box-shadow: 0 4px 10px rgba(232, 123, 90, 0.3);
         }
 
-        /* STICKY SIDEBAR */
         .sidebar-section {
             display: flex;
             flex-direction: column;
@@ -516,7 +510,6 @@
 
         /* ================= RESPONSIVE MEDIA QUERIES ================= */
 
-        /* Mobile Phones (0px to 480px) */
         @media (min-width: 0px) and (max-width: 480px) {
             body { padding: 15px 0; }
             
@@ -533,7 +526,7 @@
             .logos-row { justify-content: center; }
             
             .hero-right { width: 100%; padding-top: 40px; }
-            .floating-card-1 { left: -10px; top: 10%; width: 140px; padding: 10px; }
+            .floating-card-1 { left: -10px; top: 40%; width: 140px; padding: 10px; }
             .floating-card-2 { right: -10px; bottom: 10px; padding: 8px 12px; }
             
             .bottom-grid { grid-template-columns: 1fr; }
@@ -548,7 +541,6 @@
             .sidebar-section { position: relative; top: 0; }
         }
 
-        /* Tablets (481px to 768px) */
         @media (min-width: 481px) and (max-width: 768px) {
             body { padding: 20px 0; }
             
@@ -566,7 +558,6 @@
             .sidebar-section { position: relative; top: 0; }
         }
 
-        /* Small Desktops & Laptops (769px to 1199px) */
         @media (min-width: 769px) and (max-width: 1199px) {
             .hero-section { padding: 40px; }
             .navbar { left: 40px; right: 40px; }
@@ -579,7 +570,6 @@
             .skills-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        /* Ultra-Wide 4K Desktops (1920px and above) */
         @media (min-width: 1920px) {
             .container { max-width: 1600px; } 
             .hero-left h1 { font-size: 64px; }
@@ -851,14 +841,14 @@
 
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
-                    // Update active tab styling
+                  
                     tabs.forEach(t => t.classList.remove('active'));
                     tab.classList.add('active');
 
-                    // Get the selected filter category
+                  
                     const filter = tab.getAttribute('data-filter').toLowerCase();
 
-                    // Loop through projects and show/hide based on data-category
+                
                     projects.forEach(project => {
                         const category = project.getAttribute('data-category').toLowerCase();
                         
