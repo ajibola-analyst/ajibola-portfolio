@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajibola Ayomide Odeyemi - Portfolio</title>
+
+    <link rel="icon" type="image/png" href="./images/logo.png" onerror="this.style.display='none'">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #eaddd5;
+            --white: #ffffff;
+            --dark-purple: #3b1b28;
+            --orange: #e87b5a;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --border-light: #eaeaea;
+            --font-head: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: var(--font-body);
+            color: var(--text-main);
+            padding: 40px 0;
+            background-image: radial-gradient(#d1c5be 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Responsive Container */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 50px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            background-image: radial-gradient(#f0f0f0 1px, transparent 1px);
+            background-size: 25px 25px;
+            overflow: hidden;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .hero-left {
+            width: 55%;
+            padding-top: 80px;
+            z-index: 2;
+        }
+
+        .hero-left h1 {
+            font-family: var(--font-head);
+            font-size: 48px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            max-width: 450px;
+        }
+
+        .highlight-orange { color: var(--orange); font-weight: 600; }
+        .highlight-purple { color: var(--dark-purple); font-weight: 600; }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--dark-purple);
+            color: var(--white);
+            border: 2px solid var(--dark-purple);
+        }
+
+        .btn-primary:hover {
+            background-color: #512538;
+            border-color: #512538;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--orange);
+            border: 2px solid var(--orange);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .collaborative-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .collab-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .logos-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .logos-row img {
+            height: 40px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .logos-row img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .hero-right {
+            width: 45%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-top: 60px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-profile-img {
+            width: 100%;
+            z-index: 2;
+            background: var(--bg-color);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .floating-card-1 {
+            position: absolute;
+            left: -30px;
+            top: 40%;
+            background: var(--white);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            z-index: 3;
+            width: 180px;
+        }
+
+        .stat-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .stat-bars { display: flex; align-items: flex-end; gap: 3px; height: 20px; }
+        .bar { width: 4px; background: #ddd; border-radius: 2px; }
+        .bar.active { background: var(--dark-purple); }
+        .bar.orange { background: var(--orange); }
+
+        .floating-card-2 {
+            position: absolute;
+            right: -20px;
+            bottom: 30px;
+            background: var(--white);
+            padding: 10px 15px;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .floating-card-2 img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+
+        .floating-card-2 span {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* ================= BOTTOM GRID ================= */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .projects-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            /* CRITICAL FIX: Stops the grid blowout issue */
+            min-width: 0; 
+        }
+
+        .sidebar-section {
+            /* CRITICAL FIX: Stops the grid blowout issue */
+            min-width: 0;
+        }
+
+        .projects-section h2 {
+            font-family: var(--font-head);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .projects-bg-shape {
+            position: absolute;
+            top: 75px;
+            left: 30px;
+            right: 30px;
+            height: 180px;
+            background-color: var(--dark-purple);
+            border-radius: 12px;
+            z-index: 1;
+        }
+
+        .projects-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ONE LINE TABS */
+        .tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 0 10px 10px 10px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            width: 100%;
+        }
+        
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab {
+            color: var(--text-main);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            background: var(--border-light);
+        }
+
+        .projects-bg-shape ~ .projects-content .tab { color: var(--white); background: transparent; }
+        
+        .tab.active { background-color: var(--orange) !important; color: var(--white) !important; }
+        .tab:hover:not(.active) { background-color: rgba(255, 255, 255, 0.2) !important; }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-card h3 { font-family: var(--font-head); font-size: 15px; margin-bottom: 10px; line-height: 1.3; }
+        .project-card p { font-size: 12px; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; flex-grow: 1; }
+
+        .project-img-placeholder {
+            width: 100%;
+            height: 120px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-links { display: flex; gap: 10px; }
+
+        /* UPGRADED SHARP BUTTONS */
+        .friendly-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--dark-purple);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 11px;
+            text-decoration: none;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .friendly-btn:hover {
+            background: var(--orange);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(232, 123, 90, 0.3);
+        }
+
+        /* STICKY SIDEBAR */
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .intro-box {
+            background: var(--dark-purple);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .skills-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            background-image: radial-gradient(#f0f0f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .skills-box h2 { font-family: var(--font-head); font-size: 18px; margin-bottom: 25px; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .skill-item {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .skill-item:hover { transform: translateY(-3px); border-color: var(--orange); }
+        .skill-name { font-weight: 700; font-size: 12px; margin-bottom: 5px; text-transform: uppercase; text-align: center;}
+        .skill-exp { font-size: 11px; color: var(--text-muted); }
+
+        .contact-area h3 { font-family: var(--font-head); font-size: 14px; margin-bottom: 15px; text-transform: uppercase; }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover { color: var(--orange); }
+        .email a { color: var(--text-muted); font-size: 13px; text-decoration: none; transition: color 0.3s ease; }
+        .email a:hover { color: var(--orange); }
+
+        /* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+        /* Mobile Phones (0px to 480px) */
+        @media (min-width: 0px) and (max-width: 480px) {
+            body { padding: 15px 0; }
+            
+            .hero-section { flex-direction: column; padding: 20px; }
+            .navbar { position: static; flex-direction: column; gap: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            
+            .hero-left { width: 100%; padding-top: 20px; text-align: center; }
+            .hero-left h1 { font-size: 32px; }
+            .description { font-size: 15px; margin: 0 auto 25px auto; }
+            
+            .btn-group { flex-direction: column; }
+            .collaborative-section { align-items: center; }
+            .logos-row { justify-content: center; }
+            
+            .hero-right { width: 100%; padding-top: 40px; }
+            .floating-card-1 { left: -10px; top: 10%; width: 140px; padding: 10px; }
+            .floating-card-2 { right: -10px; bottom: 10px; padding: 8px 12px; }
+            
+            .bottom-grid { grid-template-columns: 1fr; }
+            .projects-section { padding: 20px 15px; } 
+            .projects-bg-shape { display: none; }
+            .projects-grid { grid-template-columns: 1fr; gap: 15px; }
+            
+            .projects-bg-shape ~ .projects-content .tab { color: var(--text-main); background: var(--border-light); }
+            .projects-bg-shape ~ .projects-content .tab.active { color: var(--white); background: var(--orange); }
+
+            .skills-grid { grid-template-columns: 1fr 1fr; }
+            .sidebar-section { position: relative; top: 0; }
+        }
+
+        /* Tablets (481px to 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            body { padding: 20px 0; }
+            
+            .hero-section { flex-direction: column; padding: 30px; }
+            .navbar { position: static; flex-direction: row; margin-bottom: 20px; }
+            .hero-left { width: 100%; padding-top: 20px; }
+            .hero-right { width: 100%; padding-top: 40px; }
+            
+            .floating-card-1 { left: -10px; }
+            .floating-card-2 { right: -10px; }
+            
+            .bottom-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr 1fr; }
+            .skills-grid { grid-template-columns: repeat(3, 1fr); }
+            .sidebar-section { position: relative; top: 0; }
+        }
+
+        /* Small Desktops & Laptops (769px to 1199px) */
+        @media (min-width: 769px) and (max-width: 1199px) {
+            .hero-section { padding: 40px; }
+            .navbar { left: 40px; right: 40px; }
+            .hero-left { width: 55%; padding-top: 60px; }
+            .hero-left h1 { font-size: 40px; }
+            .hero-right { width: 45%; }
+            
+            .bottom-grid { grid-template-columns: 1.4fr 1fr; }
+            .projects-grid { grid-template-columns: 1fr; } 
+            .skills-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Ultra-Wide 4K Desktops (1920px and above) */
+        @media (min-width: 1920px) {
+            .container { max-width: 1600px; } 
+            .hero-left h1 { font-size: 64px; }
+            .description { font-size: 22px; max-width: 600px; }
+            .nav-links { font-size: 16px; }
+            .btn { font-size: 16px; padding: 15px 30px; }
+            .projects-grid { grid-template-columns: 1fr 1fr; }
+            .skills-grid { grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+            .intro-box { font-size: 18px; line-height: 1.8; }
+            .project-card h3 { font-size: 18px; }
+            .project-card p { font-size: 14px; }
+            .projects-bg-shape { height: 200px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="hero-section" id="about">
+            <div class="navbar">
+                <a href="#about">
+                    <img src="./images/logo.png" alt="AO Logo" class="nav-logo" onerror="this.style.display='none'; this.parentNode.innerHTML='<strong>AO</strong>'">
+                </a>
+
+                <div class="nav-links">
+                    <a href="#about">ABOUT</a>
+                    <a href="#projects">PROJECTS</a>
+                    <a href="#skills">SKILLS</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+            </div>
+
+            <div class="hero-left">
+                <h1>Ajibola Ayomide<br>Odeyemi</h1>
+                <p class="subtitle">Quantitative Data Analyst | AI-Integrated Data Specialist</p>
+                <p class="description">
+                    Transforming complex, multi-variable datasets into <span class="highlight-orange">actionable business intelligence</span> with <span class="highlight-purple">3+ years</span> of professional rigor.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                    <a href="./cv/Ajibola_Odeyemi_Resume.pdf" download class="btn btn-outline">Download CV</a>
+                </div>
+
+                <div class="collaborative-section">
+                    <span class="collab-text">Proudly Affiliated With</span>
+                    <div class="logos-row">
+                        <img src="./images/lautech.jpg" alt="LAUTECH" onerror="this.alt='LAUTECH'">
+                        <img src="./images/sqi.png" alt="SQI College" onerror="this.alt='SQI COLLEGE'">
+                        <img src="./images/Elsevier_logo_2019.png" alt="Elsevier" onerror="this.alt='ELSEVIER'">
+                        <img src="./images/londonHA.webp" alt="London Heartbeatsz" onerror="this.alt='LONDON HEARTBEATSZ'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="image-wrapper">
+                    <div class="floating-card-1">
+                        <div class="stat-row">
+                            <span>QUERIES<br>OPTIMIZED</span>
+                            <div class="stat-bars">
+                                <div class="bar" style="height: 40%;"></div>
+                                <div class="bar active" style="height: 100%;"></div>
+                                <span>+60%</span>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <span>DASHBOARDS<br>DEPLOYED</span>
+                            <div class="stat-bars">
+                                <div class="bar" style="height: 60%;"></div>
+                                <div class="bar active" style="height: 85%;"></div>
+                                <span>15+</span>
+                            </div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:0;">
+                            <span>DATA ACCURACY<br>MAINTAINED</span>
+                            <div class="stat-bars">
+                                <div class="bar orange" style="height: 90%;"></div>
+                                <div class="bar orange active" style="height: 100%;"></div>
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="./images/1.jpg" alt="Ajibola Ayomide" class="main-profile-img">
+
+                    <div class="floating-card-2">
+                        <img src="./images/1.jpg" alt="Ajibola Ayomide" onerror="this.style.display='none'">
+                        <span>Active Data and<br>Business Analyst</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-grid">
+
+            <div class="projects-section" id="projects">
+                <h2>PROJECT PORTFOLIO</h2>
+
+                <div class="projects-bg-shape"></div>
+
+                <div class="projects-content">
+
+                    <div class="tabs">
+                        <div class="tab active" data-filter="all">ALL</div>
+                        <div class="tab" data-filter="power bi">POWER BI</div>
+                        <div class="tab" data-filter="tableau">TABLEAU</div>
+                        <div class="tab" data-filter="sql">SQL</div>
+                        <div class="tab" data-filter="python">PYTHON</div>
+                        <div class="tab" data-filter="excel">EXCEL</div>
+                        <div class="tab" data-filter="spss">SPSS</div>
+                        <div class="tab" data-filter="research">RESEARCH</div>
+                    </div>
+
+                    <div class="projects-grid">
+
+                        <div class="project-card" data-category="power bi">
+                            <h3>GLOBAL SOFTWARE SALES PERFORMANCE ENGINE</h3>
+                            <p>An interactive Power BI dashboard utilizing a Star Schema and dynamic DAX to analyze 50k+ records. Built to track customer loyalty, billing efficiency, and revenue optimization.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/powerbi.jpg" alt="Global Software Sales Power BI Dashboard" onerror="this.style.display='none'; this.parentNode.innerHTML='[Power BI Dashboard Image]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajibola-analyst/powerbi-software-retailer-analytics.git" target="_blank" class="friendly-btn"><i class="fa-brands fa-github"></i> View Project Details</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="tableau">
+                            <h3>THE ANATOMY OF GLOBAL MORTALITY (2015-2025)</h3>
+                            <p>An interactive Tableau dashboard analyzing a 10-year dataset of global mortality trends. Utilizes advanced data storytelling to map demographic vulnerabilities.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/tableau.png" alt="Global Mortality Tableau Dashboard" onerror="this.style.display='none'; this.parentNode.innerHTML='[Tableau Dashboard Image]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://public.tableau.com/views/TheAnatomyofGlobalMortality/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="friendly-btn"><i class="fa-solid fa-chart-line"></i> View Dashboard</a>
+                                <a href="https://github.com/ajibola-analyst/global-mortality-analysis.git" target="_blank" class="friendly-btn"><i class="fa-brands fa-github"></i> Project Logic</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="sql python">
+                            <h3>SQL CENTRAL PARK SQUIRREL DATA PIPELINE</h3>
+                            <p>MySQL backend, Python/Pandas extraction, Seaborn mapping visualization. Behavioral tracking. Handled messy string dates and boolean conversions programmatically.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/Squirrel_Dashboard_Premium.png" alt="SQL Data Map" onerror="this.style.display='none'; this.parentNode.innerHTML='[SQL Chart Image]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajibola-analyst/central-park-squirrel-etl-pipeline.git" target="_blank" class="friendly-btn"><i class="fa-brands fa-github"></i> View Project Details</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="sql python">
+                            <h3>SECURE INSTITUTIONAL DATABASE SYSTEM</h3>
+                            <p>MySQL, bcrypt security, connection pooling, role-based access. Enterprise-grade architecture separating business logic from database UI views.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/python.1.png" alt="Database schema" onerror="this.style.display='none'; this.parentNode.innerHTML='[Database Schema Image]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajibola-analyst/school-management-system.git" target="_blank" class="friendly-btn"><i class="fa-brands fa-github"></i> View Project Details</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="excel">
+                            <h3>ENTERPRISE COMMERCIAL ANALYTICS ENGINE</h3>
+                            <p>An end-to-end commercial analytics engine built in Excel. Features rigorous ETL processing, dimensional data modeling, and dynamic KPI dashboards.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/excel.jpg" alt="Excel Dashboard" onerror="this.style.display='none'; this.parentNode.innerHTML='[Excel Dashboard Image]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajibola-analyst/enterprise-retail-dashboard.git" target="_blank" class="friendly-btn"><i class="fa-brands fa-github"></i> View Project Details</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="spss">
+                            <h3>SPSS HR ATTRITION DRIVERS ANALYSIS</h3>
+                            <p>IBM SPSS HR database analysis using independent T-tests. Identified statistically significant 24-month flight risk spikes, a $2k income gap, and heavy commute fatigue.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/spss.png" alt="SPSS Chart" onerror="this.style.display='none'; this.parentNode.innerHTML='[SPSS T-Test Chart]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ajibola-analyst/ibm-hr-attrition-predictive-analysis.git" target="_blank" class="friendly-btn"><i class="fa-brands fa-github"></i> View Project Details</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="research python r">
+                            <h3>QUANTITATIVE RISK MODELING & BIOMEDICAL RESEARCH</h3>
+                            <p>Elsevier, Vol. 228 publication. End-to-end data lifecycle for multi-variable clinical cohorts. Python/R statistical probability modeling and rigorous EDA.</p>
+                            <div class="project-img-placeholder">
+                                <img src="./images/research.jpg" alt="Research curve" onerror="this.style.display='none'; this.parentNode.innerHTML='[Research Bell Curve]'">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0039128X26000103?via%3Dihub" target="_blank" class="friendly-btn"><i class="fa-solid fa-book-open"></i> Read Publication</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="intro-box">
+                    Transforming complex, multi-variable datasets into actionable business intelligence with 4+ years of professional rigor.
+                </div>
+
+                <div class="skills-box" id="skills">
+                    <h2>TECHNICAL ARSENAL</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">ADVANCED EXCEL</span>
+                            <span class="skill-exp">4 YRS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-exp">3+ YRS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">POWER BI</span>
+                            <span class="skill-exp">2+ YRS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TABLEAU</span>
+                            <span class="skill-exp">2 YRS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PYTHON (PANDAS)</span>
+                            <span class="skill-exp">2 YRS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">R</span>
+                            <span class="skill-exp">2 YRS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">BI DASHBOARDS</span>
+                            <span class="skill-exp">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ETL PIPELINES</span>
+                            <span class="skill-exp">Proficient</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AI FOR DATA</span>
+                            <span class="skill-exp">Google Certified</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-area" id="contact">
+                        <h3>LETS CONNECT</h3>
+
+                        <div class="social-icons">
+                            <a href="https://github.com/ajibola-analyst" target="_blank"><i class="fa-brands fa-github"></i> GITHUB</a>
+                            <a href="https://linkedin.com/in/ajibola-odeyemi-6b6502381" target="_blank"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
+                            <a href="https://orcid.org/0009-0007-9924-1216" target="_blank"><i class="fa-solid fa-id-badge"></i> ORCID</a>
+                        </div>
+
+                        <div class="email">
+                            <a href="mailto:ajibolayomide@gmail.com">ajibolayomide@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab');
+            const projects = document.querySelectorAll('.project-card');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Update active tab styling
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Get the selected filter category
+                    const filter = tab.getAttribute('data-filter').toLowerCase();
+
+                    // Loop through projects and show/hide based on data-category
+                    projects.forEach(project => {
+                        const category = project.getAttribute('data-category').toLowerCase();
+                        
+                        if (filter === 'all' || category.includes(filter)) {
+                            project.style.display = 'flex';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
