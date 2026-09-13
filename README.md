@@ -2,7 +2,7 @@
 
 Welcome to the repository for my professional portfolio architecture. This site serves as a central hub for my quantitative work, showcasing my ability to translate complex, multidimensional datasets into actionable business intelligence through rigorous data engineering, stochastic modeling, and technical storytelling.
 
-**🌐 Live Site:** [Insert Your Portfolio Link Here]
+**🌐 Live Site:** https://ajibola-analyst.vercel.app/
 
 ## Professional Focus
 I specialize in quantitative data analysis, actuarial risk modeling, SaaS product analytics, and AI-integrated data systems. My workflow relies on a robust technical stack to execute end-to-end data lifecycles—from relational extraction and MLOps deployment to strategic executive dashboarding.
